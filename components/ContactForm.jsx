@@ -89,56 +89,49 @@ const ContactForm = props => {
           </div>
           <div className="form">
             <div className="firsLine">
-              <TextField
-                id="filled-name-input"
-                label="Name"
-                className="small"
-                // classes={{ root: 'small' }}
-                type="name"
-                name="name"
-                autoComplete="name"
-                margin="normal"
-                variant="filled"
-                value={name}
-                onChange={e => onChange('name', e.target.value)}
-              />
-              <TextField
-                id="filled-email-input"
-                label="Email"
-                className="small"
-                type="email"
-                name="email"
-                autoComplete="email"
-                margin="normal"
-                variant="filled"
-                value={email}
-                onChange={e => onChange('email', e.target.value)}
-              />
+              <div className="input-container">		
+                <input
+                  id="name"
+                  type="name"
+                  className="input"
+                  value={name}
+                  onChange={e => onChange('name', e.target.value)}
+                />
+                <label htmlFor="name" className={`label ${name !== "" && "nozero"}`}>Name</label>
+              </div>
+              <div className="input-container">		
+                <input
+                  id="email"
+                  type="email"
+                  className="input"
+                  value={email}
+                  onChange={e => onChange('email', e.target.value)}
+                />
+                <label htmlFor="email" className={`label ${email !== "" && "nozero"}`}>Email</label>
+              </div>
             </div>
-            <div className="other">
-              <TextField
-                id="filled-phone-input"
-                label="Phone"
-                className="textField"
-                type="phone"
-                name="phone"
-                autoComplete="phone"
-                margin="normal"
-                variant="filled"
-                value={phone}
-                onChange={e => onChange('phone', e.target.value)}
-              />
-              <TextField
-                id="filled-multiline-static"
-                label="Multiline"
-                multiline
-                rows="4"
-                className="textField"
-                margin="normal"
-                variant="filled"
-                value={message}
-                onChange={e => onChange('message', e.target.value)}
-              />
+            <div className="large">
+              <div className="input-container">		
+                <input
+                  id="phone"
+                  type="phone"
+                  className="input"
+                  value={phone}
+                  onChange={e => onChange('phone', e.target.value)}
+                />
+                <label htmlFor="phone" className={`label large ${phone !== "" && "nozero"}`}>Phone</label>
+              </div>
+              <div className="input-container">		
+                <textarea
+                  id="message"
+                  type="message"
+                  className="input"
+                  value={message}
+                  rows="5"
+                  onChange={e => onChange('message', e.target.value)}
+                />
+                <label htmlFor="message" className={`label large ${message !== "" && "nozero"}`}>Message</label>
+              </div>
             </div>
             <button
               variant="contained"
@@ -227,13 +220,54 @@ const ContactForm = props => {
             width: 100%;
             flex-direction: row;
           }
+          .input-container {
+            position: relative;
+            margin-top: 16px;
+            margin-bottom: 8px;
+          }
+          .label {
+            position: absolute;
+            top: 17px;
+            left: 12px;
+            font-size: 16px;
+            color: #fff;	
+            transition: all 0.3s ease-in-out;
+            font-family: "avenir-light", sans-serif;
+          }
+          .input { 
+            border: 0;
+            border-bottom: 2px solid #fff;
+            background-color: #000;
+            opacity:  0.5;
+            width: 100%;
+            font-size: 16px;
+            color: #fff;
+            padding: 27px 12px 10px;
+            border-radius: 4px 4px 0 0;
+            color: #fff;
+          }
+          .input:focus { 
+            border: none;	
+            outline: none;
+            border-bottom: 2px solid #ffeb3b;	
+          }
+          .nozero {
+            color: #fff;
+            top: 10px;
+            font-size: 12px;
+          }
+          .input:focus ~ .label {
+            top: 10px;
+            font-size: 12px;
+            color: #ffeb3b;
+          }
           .small {
             margin-left: 8px!important;
             margin-right: 8px!important;
             background-color: #ffffff!important;
             width: 45%!important;
           }
-          .other: {
+          .large {
             width: 100%;
           }
           .button {

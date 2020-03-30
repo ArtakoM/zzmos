@@ -76,7 +76,7 @@ const portfolio = [
   },
   {
     name: 'Coinbank',
-    url: 'http://coinbank.com/',
+    url: 'http://coinbank.org/',
     img: '/resources/images/coinbank.png',
     position: {
       x: 'center',
