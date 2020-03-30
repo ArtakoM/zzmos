@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TextField from '@material-ui/core/TextField';
 import {
   FaFacebookSquare,
   FaInstagram,
@@ -40,7 +39,7 @@ const ContactForm = props => {
                 <FaFacebookSquare />
               </a>
               <a
-                href="https://www.instagram.com/mosinyan.artak/"
+                href="https://www.instagram.com/zz_mos/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social"

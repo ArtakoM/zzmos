@@ -3,10 +3,17 @@ import ThirdSection from '../components/ThirdSection'
 
 const experience = [
   {
+    id: 4,
+    title: 'Polehin.com',
+    vacancy: 'Web Developer',
+    duration: '2019 July - Present',
+    description: 'Bitcoin Wallet was created in 2018 with the goal of making cryptocurrencies accessible and understandable for a wider range of users.',
+  },
+  {
     id: 3,
     title: 'Dark Mirror',
     vacancy: 'Web/Mobile Developer',
-    duration: '2018 October - Present',
+    duration: '2018 October - 2019 July',
     description: 'In a Dark Mirror, my main work is to create user interfaces using React.js, add for them required functionality and implement REST API.',
   },
   {
