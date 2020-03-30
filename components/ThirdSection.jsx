@@ -1,0 +1,187 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const ThirdSection = (props) => {
+  const { experience } = props;
+  
+  return (
+    <React.Fragment>
+      <section
+        className="root"
+        id="third"
+      >
+        <div className="background"/>
+        <div className="experienceWrapper">
+          <div className="titleWrapper">
+            <p className="title">
+              <span className="yellow">
+                02
+              </span> Experience
+            </p>
+          </div>
+          <div className="experience">
+            {
+              experience.map((i, key) => {
+                const className = key % 2 === 1 ? 'right' : 'left';
+                return (
+                  <div
+                    key={i.id}
+                    className="timeline"
+                  >
+                    <div className={className}>
+                      <p className="duration gutter">
+                        {i.duration}
+                      </p>
+                      <p  className="jobTitle">
+                        {i.title}
+                      </p>
+                      <p className="vacancy gutter">
+                        {i.vacancy}
+                      </p>
+                      <p
+                        className="description gutter"
+                        align={key % 2 === 1 ? 'left' : 'right'}
+                      >
+                        {i.description}
+                      </p>
+                    </div>
+                  </div>
+                )
+              })
+            }
+          </div>
+        </div>
+      </section>
+      <style jsx>{`
+        .root {
+          min-height: 980px;
+          height: 100%;
+          position: relative;
+          min-width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 80px 0;
+        }
+        .background {
+          position: absolute;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          background: url(/resources/images/third.jpg);
+          background-attachment: fixed;
+          background-position: top center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .experienceWrapper {
+          flex: 0 0 65%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .titleWrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 56px;
+        }
+        .title {
+          text-transform: uppercase;
+          font-family: lulo-clean, sans-serif;
+          font-size: 42px;
+          color: #ffffff;
+          font-weight: 900;
+        }
+        .yellow {
+          color: #ffeb3b;
+        }
+        .text {
+          text-transform: uppercase;
+          font-family: lulo-clean, sans-serif;
+          font-size: 20px;
+          color: #ffffff;
+        }
+        .experience {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+        }
+        .timeline {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          width: 651px;
+        }
+        .left {
+          width: calc(50% + 1px);
+          align-self: flex-start;
+          border-right: 2px solid #ffeb3b;
+          box-sizing: border-box;
+          padding: 24px;
+          padding-bottom: 48px;
+          padding-top: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          position: relative;
+        }
+        .left::after {
+          content: ' ';
+          width: 20px;
+          height: 20px;
+          background-color: #ffeb3b;
+          position: absolute;
+          right: -11px;
+          border-radius: 50%;
+        }
+        .right {
+          width: calc(50% + 1px);
+          align-self: flex-end;
+          border-left: 2px solid #ffeb3b;
+          box-sizing: border-box;
+          padding: 24px;
+          padding-bottom: 48px;
+          position: relative;
+        }
+        .right::before {
+          content: ' ';
+          width: 20px;
+          height: 20px;
+          background-color: #ffeb3b;
+          position: absolute;
+          left: -11px;
+          border-radius: 50%;
+        }
+        .duration {
+          color: #ffeb3b;
+          font-weight: 900;
+          font-size: 20px;
+        }
+        .jobTitle {
+          color: #ffffff;
+          font-size: 24px;
+          padding-bottom: 16px;
+        }
+        .vacancy {
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: 600;
+          padding-bottom: 16px;
+        }
+        .description {
+          color: #ffffff;
+          font-size: 16px;
+          padding-bottom: 16px;
+        }
+      `}</style>
+    </React.Fragment>
+  );
+};
+
+ThirdSection.propTypes = {
+  experience: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+};
+
+export default ThirdSection;
