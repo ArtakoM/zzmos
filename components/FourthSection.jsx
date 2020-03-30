@@ -68,7 +68,6 @@ const FourthSection = props => {
         className="root"
         id="portfolio"
       >
-        <div className="background"/>
         <div className="portfolioWrapper">
           {renderPortfolio()}
         </div>
@@ -83,17 +82,6 @@ const FourthSection = props => {
           justify-content: center;
           align-items: center;
           padding: 80px 0;
-        }
-        .background {
-          position: absolute;
-          z-index: -1;
-          width: 100%;
-          height: 100%;
-          background: url(/resources/images/fourth.jpg);
-          background-attachment: fixed;
-          background-position: center center;
-          background-repeat: no-repeat;
-          background-size: cover;
         }
         .portfolioWrapper {
           flex: 0 0 65%;

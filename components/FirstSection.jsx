@@ -7,7 +7,6 @@ const FirstSection = () => {
         className="root"
         id="first"
       >
-        <div className="background" />
         <div className="wrapper">
           <div className="me">
             <p className="text">
@@ -36,17 +35,6 @@ const FirstSection = () => {
             height: 100vh;
             position: relative;
             min-width: 100%;
-          }
-          .background {
-            position: absolute;
-            z-index: -1;
-            width: 100%;
-            height: 100%;
-            background: url(/resources/images/first.jpg);
-            background-attachment: fixed;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
           }
           .wrapper {
             height: 100vh;

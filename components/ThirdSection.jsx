@@ -10,7 +10,6 @@ const ThirdSection = (props) => {
         className="root"
         id="third"
       >
-        <div className="background"/>
         <div className="experienceWrapper">
           <div className="titleWrapper">
             <p className="title">
@@ -63,17 +62,6 @@ const ThirdSection = (props) => {
           align-items: center;
           padding: 80px 0;
         }
-        .background {
-          position: absolute;
-          z-index: -1;
-          width: 100%;
-          height: 100%;
-          background: url(/resources/images/third.jpg);
-          background-attachment: fixed;
-          background-position: top center;
-          background-repeat: no-repeat;
-          background-size: cover;
-        }
         .experienceWrapper {
           flex: 0 0 65%;
           display: flex;
@@ -112,7 +100,7 @@ const ThirdSection = (props) => {
           flex: 1;
           display: flex;
           flex-direction: column;
-          width: 651px;
+          width: 677px;
         }
         .left {
           width: calc(50% + 1px);

@@ -10,7 +10,6 @@ const SecondSection = (props) => {
         className="root"
         id="second"
       >
-        <div className="background"/>
         <div className="skillsWrapper">
           <div className="titleWrapper">
             <p className="title">
@@ -59,17 +58,6 @@ const SecondSection = (props) => {
             display: flex;
             justify-content: center;
             align-items: center;
-          }
-          .background {
-            position: absolute;
-            z-index: -1;
-            width: 100%;
-            height: 100%;
-            background: url(/resources/images/second.jpg);
-            background-attachment: fixed;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
           }
           .skillsWrapper {
             flex: 0 0 65%;

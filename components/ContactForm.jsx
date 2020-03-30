@@ -151,7 +151,6 @@ const ContactForm = props => {
             height: 100vh;
             position: relative;
             min-width: 100%;
-            background-color: #000;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -286,6 +285,7 @@ const ContactForm = props => {
             text-transform: uppercase;
             padding: 8px 24px;
             font-size: 0.9375rem;
+            cursor: pointer;
           }
           .button:hover {
             background-color: #000;
