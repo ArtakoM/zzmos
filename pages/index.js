@@ -10,7 +10,7 @@ const Home = () => (
       <link rel="apple-touch-icon" href="/favicon.ico"></link>
       <meta name="theme-color" content="#ffeb3b"/>
       <link rel="manifest" href="/manifest.json" />
-      <meta name="robots" content="noindex"/>
+      <meta name="robots" content="all"/>
       <meta name="Description" content="Artak Mosinyan CV"></meta>
     </Head>
     <MainContainer />
