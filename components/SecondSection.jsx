@@ -119,6 +119,37 @@ const SecondSection = (props) => {
             height: 65%;
             width: 0;
           }
+          @media (max-width: 600px) {
+            .skillsWrapper {
+              flex: 0 0 90%;
+            }
+            .titleWrapper {
+              align-items: flex-start;
+            }
+            .title {
+              font-size: 90%;
+            }
+            .yellow {
+              font-size: 90%;
+            }
+            .text {
+              font-size: 40%;
+            }
+            .skillText {
+              font-size: 12px;
+            }
+            .skillLevel {
+              height: 50%;
+            }
+          }
+          @media (max-width: 460px) {
+            .skillText {
+              font-size: 8px;
+            }
+            .skillLevel {
+              height: 40%;
+            }
+          }
         }
       `}</style>
     </React.Fragment>  

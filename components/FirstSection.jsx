@@ -78,6 +78,22 @@ const FirstSection = () => {
           .gutter {
             margin-bottom: 0.35em;
           }
+          @media (max-width: 600px) {
+            .text {
+              font-size: 48px;
+            }
+            .position {
+              font-size: 18px;
+            }
+          }
+          @media (max-width: 450px) {
+            .text {
+              font-size: 32px;
+            }
+            .position {
+              font-size: 12px;
+            }
+          }
         }
       `}</style>
 

@@ -9,12 +9,12 @@ import ContactFormContainer from './ContactFormContainer';
 const MainContainer = () => (
   <React.Fragment>
     <div className="root">
-      <HeaderContainer />
-      <FirstSection />
+      {/* <HeaderContainer /> */}
+      {/* <FirstSection /> */}
       <SkillsContainer />
-      <ExperienceContainer />
-      <PortfolioContainer />
-      <ContactFormContainer />
+      {/* <ExperienceContainer /> */}
+      {/* <PortfolioContainer /> */}
+      {/* <ContactFormContainer /> */}
     </div>
     <style jsx>{`
       .root {
