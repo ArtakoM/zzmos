@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ThirdSection = (props) => {
-  const { experience } = props;
+  const { experience, isMobile } = props;
   
   return (
     <React.Fragment>
@@ -101,6 +101,7 @@ const ThirdSection = (props) => {
           display: flex;
           flex-direction: column;
           width: 677px;
+          max-width: 100%;
         }
         .left {
           width: calc(50% + 1px);
@@ -163,13 +164,66 @@ const ThirdSection = (props) => {
           font-size: 16px;
           padding-bottom: 16px;
         }
+        @media (max-width: 600px) {
+          .titleWrapper {
+            align-items: flex-start;
+          }
+          .title {
+            font-size: 36px;
+          }
+          .yellow {
+            font-size: 36px;
+          }
+          .timeline {
+            width: unset;
+          }
+          .experienceWrapper {
+            flex: 0 0 100%;
+          }
+        }
+        @media (max-width: 450px) {
+          .title {
+            font-size: 24px;
+          }
+          .yellow {
+            font-size: 24px;
+          }
+          .description {
+            font-size: 12px;
+          }
+          .vacancy {
+            font-size: 14px;
+          }
+          .jobTitle {
+            font-size: 20px;
+          }
+          .duration {
+            font-size: 14px;
+          }
+        }
       `}</style>
     </React.Fragment>
   );
 };
 
+ThirdSection.getInitialProps = ({ req }) => {
+  let userAgent;
+  if (req) { // if you are on the server and you get a 'req' property from your context
+    userAgent = req.headers['user-agent']; // get the user-agent from the headers
+  } else {
+    userAgent = navigator.userAgent; // if you are on the client you can access the navigator from the window object
+  }
+
+  let isMobile = Boolean(userAgent.match(
+    /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+  ));
+  
+  return { isMobile };
+}
+
 ThirdSection.propTypes = {
   experience: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  isMobile: PropTypes.bool.isRequired,
 };
 
 export default ThirdSection;

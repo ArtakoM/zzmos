@@ -12,7 +12,7 @@ const MainContainer = () => (
       {/* <HeaderContainer /> */}
       <FirstSection />
       <SkillsContainer />
-      {/* <ExperienceContainer /> */}
+      <ExperienceContainer />
       {/* <PortfolioContainer /> */}
       {/* <ContactFormContainer /> */}
     </div>
