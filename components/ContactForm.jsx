@@ -299,6 +299,27 @@ const ContactForm = props => {
             font-size: 36px;
             margin-right: 6px;
           }
+          @media (max-width: 600px) {
+            .formWrapper {
+              flex-direction: column;
+              padding: 8px 0;
+            }
+            .about {
+              padding-bottom: 0;
+            }
+            .firsLine {
+              flex-direction: column;
+            }
+            .form {
+              align-items: flex-end;
+            }
+            .text {
+              font-size: 14px;
+            }
+            .email {
+              font-size: 14px;
+            }
+          }
         }
       `}</style>
     </React.Fragment>

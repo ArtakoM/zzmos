@@ -101,6 +101,26 @@ const Header = props => {
           font-weight: bold;
           font-size: 36px;
         }
+        @media (max-width: 600px) {
+          .root {
+            left: 0;
+            bottom: -1px;
+            background: black;
+            height: unset;
+            width: 100%;
+          }
+          .content {
+            width: 100%;
+            align-items: unset;
+          }
+          .menu {
+            flex-direction: row;
+          }
+          .menuItem {
+            width: 25%;
+            opacity: 1;
+          }
+        }
       `}</style>
     </React.Fragment>
   );
