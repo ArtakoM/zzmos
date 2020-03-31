@@ -10,7 +10,7 @@ const MainContainer = () => (
   <React.Fragment>
     <div className="root">
       {/* <HeaderContainer /> */}
-      {/* <FirstSection /> */}
+      <FirstSection />
       <SkillsContainer />
       {/* <ExperienceContainer /> */}
       {/* <PortfolioContainer /> */}
