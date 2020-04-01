@@ -16,8 +16,8 @@ const MainContainer = () => (
     </div>
     <style jsx>{`
       .root {
-        background: rgb(0,0,0);
-        background: linear-gradient(315deg, rgba(0,0,0,1) 0%, rgba(34,0,48,1) 100%);
+        background-color: #FF3CAC;
+        background-image: linear-gradient(75deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
       }
     `}</style>
   </React.Fragment>
