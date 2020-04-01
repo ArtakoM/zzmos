@@ -4,14 +4,14 @@ import MainContainer from '../containers/MainContainer';
 const Home = () => (
     <div className="container">
     <Head>
-      <title>Artak Mosinyan</title>
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" href="/favicon.ico"></link>
+      <title>ZZMOS</title>
+      <link rel="icon" href="/512.png" />
+      <link rel="apple-touch-icon" href="/512.png"></link>
       <meta name="theme-color" content="#ffeb3b"/>
       <link rel="manifest" href="/manifest.json" />
       <meta name="robots" content="all"/>
       <meta name="description" content="Artak Mosinyan CV"></meta>
-      <meta property="og:title" content="Artak Mosinyan" />
+      <meta property="og:title" content="ZZMOS" />
       <meta property="og:url" content="http://zzmos.now.sh/" />
       <meta property="og:image" content="/resources/images/og-image.png" />
     </Head>
