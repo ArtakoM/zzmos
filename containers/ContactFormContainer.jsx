@@ -1,4 +1,5 @@
 import React from 'react';
+import emailjs from 'emailjs-com';
 import ContactForm from '../components/ContactForm';
 
 class ContactFormContainer extends React.Component {
@@ -25,9 +26,22 @@ class ContactFormContainer extends React.Component {
       message,
     } = this.state;
 
-    const mail = `Email: ${email}\n Name: ${name}\n Phone: ${phone}\n\n ${message}`;
-
-    console.log(email, mail);
+    emailjs.send(
+      'gmail',
+      'template_DgRHUNcA',
+      {
+        email,
+        name,
+        phone,
+        message,
+      },
+      'user_e9afVe4yEarL6GPnVDmeZ'
+    )
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
   };
 
   render() {

@@ -86,7 +86,7 @@ const ContactForm = props => {
               Tel: <span className="number">+37443455440</span>
             </p>
           </div>
-          <div className="form">
+          <form id="form" className="form">
             <div className="firsLine">
               <div className="input-container">		
                 <input
@@ -141,7 +141,7 @@ const ContactForm = props => {
             >
               Send
             </button>
-          </div>
+          </form>
         </div>
       </section>
       <style jsx>{`

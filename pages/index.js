@@ -1,17 +1,19 @@
 import Head from 'next/head';
-import { StylesProvider } from '@material-ui/core/styles';
 import MainContainer from '../containers/MainContainer';
 
 const Home = () => (
     <div className="container">
     <Head>
-      <title>Create Next App</title>
+      <title>Artak Mosinyan</title>
       <link rel="icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" href="/favicon.ico"></link>
       <meta name="theme-color" content="#ffeb3b"/>
       <link rel="manifest" href="/manifest.json" />
       <meta name="robots" content="all"/>
-      <meta name="Description" content="Artak Mosinyan CV"></meta>
+      <meta name="description" content="Artak Mosinyan CV"></meta>
+      <meta property="og:title" content="Artak Mosinyan" />
+      <meta property="og:url" content="http://zzmos.now.sh/" />
+      <meta property="og:image" content="/resources/images/og-image.png" />
     </Head>
     <MainContainer />
     <style jsx global>{`
