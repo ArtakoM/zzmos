@@ -13,7 +13,7 @@ const Home = () => (
       <meta name="description" content="Artak Mosinyan CV"></meta>
       <meta property="og:title" content="ZZMOS" />
       <meta property="og:url" content="http://zzmos.now.sh/" />
-      <meta property="og:image" content="/resources/images/og-image.png" />
+      <meta property="og:image" content="/resources/images/social-preview.png" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="ZZMOS" />
     </Head>
