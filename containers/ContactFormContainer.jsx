@@ -1,30 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import ContactForm from '../components/ContactForm';
 
-class ContactFormContainer extends React.Component {
-  state = {
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  };
+const ContactFormContainer = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+  const [button, setButton] = useState({ text: 'Send', loading: false });
 
-  onChange = (field, val) => {
-    return this.setState({
-      [field]: val,
-    });
-  };
-
-  onSend = e => {
+  const onSend = e => {
     e.preventDefault();
-
-    const {
-      email,
-      name,
-      phone,
-      message,
-    } = this.state;
+    setButton({ text: 'Sending...', loading: true });
 
     emailjs.send(
       'gmail',
@@ -37,32 +24,31 @@ class ContactFormContainer extends React.Component {
       },
       'user_e9afVe4yEarL6GPnVDmeZ'
     )
-      .then((result) => {
-          console.log(result.text);
+      .then(() => {
+        setButton({ text: 'Send', loading: false })
+        setName('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
       });
   };
 
-  render() {
-    const {
-      name,
-      email,
-      phone,
-      message,
-    } = this.state;
-
-    return (
-      <ContactForm
-        name={name}
-        email={email}
-        phone={phone}
-        message={message}
-        onChange={this.onChange}
-        onSend={this.onSend}
-      />
-    );
-  }
+  return (
+    <ContactForm
+      name={name}
+      email={email}
+      phone={phone}
+      message={message}
+      setName={setName}
+      setEmail={setEmail}
+      setPhone={setPhone}
+      setMessage={setMessage}
+      button={button}
+      onSend={onSend}
+    />
+  );
 }
 
 export default ContactFormContainer;

@@ -14,10 +14,6 @@ const menu = [
     name: 'EXPERIENCE',
     id: 'third',
   },
-  // {
-  //   name: 'PORTFOLIO',
-  //   id: 'portfolio',
-  // },
   {
     name: 'CONTACT',
     id: 'contact',

@@ -36,7 +36,7 @@ const Header = props => {
   };
 
   return (
-    <React.Fragment>
+    <>
       <nav className="root">
         <div className="content">
           <div className="menuWrapper">
@@ -122,7 +122,7 @@ const Header = props => {
           }
         }
       `}</style>
-    </React.Fragment>
+    </>
   );
 };
 
